@@ -8,6 +8,9 @@ using Trademe.Automation.Core.HttpClients;
 
 namespace Trademe.Automation.Core.DiContainer
 {
+	/// <summary>
+	/// DI Container for API tests
+	/// </summary>
 	public class DependencyInjector
 	{
 		public static IServiceProvider GetServiceProvider()
@@ -20,7 +23,7 @@ namespace Trademe.Automation.Core.DiContainer
 			return services.BuildServiceProvider();
 		}
 
-		private static ILogger InitializeLogger()
+		public static ILogger InitializeLogger()
 		{
 			return new LoggerConfiguration()
 				.MinimumLevel.Debug()

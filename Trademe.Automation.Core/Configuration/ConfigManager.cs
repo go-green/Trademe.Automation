@@ -5,22 +5,22 @@ namespace Trademe.Automation.Core.Configuration
 {
 	public class ConfigManager
 	{
-		public string GetSetting(string settingName, string domain)
+		public string GetSetting(string settingName)
 		{
-			return GetFromAppSettings(settingName, domain);
+			return GetFromAppSettings(settingName);
 		}
 
-		private string GetFromAppSettings(string settingName, string domain)
+		private string GetFromAppSettings(string settingName)
 		{
-			var config = InitializeConfiguration(domain);
+			var config = InitializeConfiguration();
 			return config[settingName];
 		}
 
-		private static IConfigurationRoot InitializeConfiguration(string domain)
+		private static IConfigurationRoot InitializeConfiguration()
 		{
 			var configBuilder = new ConfigurationBuilder()
 				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile($"{domain}.appsettings.json");
+				.AddJsonFile("appsettings.json");
 			var config = configBuilder.Build();
 			return config;
 		}

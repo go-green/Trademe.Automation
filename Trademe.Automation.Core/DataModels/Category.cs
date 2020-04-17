@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Trademe.Automation.Core.Dtos
+namespace Trademe.Automation.Core.DataModels
 {
 	public class Category
 	{

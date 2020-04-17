@@ -58,8 +58,5 @@ namespace Tests
 		public void TearDown()
 		{
 		}
-
-		// Only GetAsync was implemented as no other HTTP verbs were required to achieve the given task
-		// No attempts were made to implement bearer token acquisition to authenticate the request as its was not required
 	}
 }

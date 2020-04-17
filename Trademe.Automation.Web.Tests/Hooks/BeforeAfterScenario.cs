@@ -1,7 +1,12 @@
 ﻿using BoDi;
+using Microsoft.Extensions.DependencyModel;
 using OpenQA.Selenium;
+using Serilog;
 using TechTalk.SpecFlow;
 using Trademe.Automation.Core.Configuration;
+using Trademe.Automation.Core.Contracts.Api;
+using Trademe.Automation.Core.DiContainer;
+using Trademe.Automation.Core.HttpClients;
 using Trademe.Automation.Web.Driver;
 
 namespace Trademe.Automation.Web.Tests.Hooks
@@ -20,11 +25,19 @@ namespace Trademe.Automation.Web.Tests.Hooks
 		[BeforeScenario]
 		public void BeforeScenario()
 		{
-			InitializeWebDriver();
+			RegisterWebDriver();
+			RegisterApiClients();
 			_webDriver.Manage().Window.Maximize();
 		}
 
-		private void InitializeWebDriver()
+		private void RegisterApiClients()
+		{
+			_objectContainer.RegisterTypeAs<CatalogueHttpClient, ICatelogue>();
+			_objectContainer.RegisterTypeAs<RestClientBase, IRestClientBase>();
+			_objectContainer.RegisterInstanceAs<ILogger>(DependencyInjector.InitializeLogger());
+		}
+
+		private void RegisterWebDriver()
 		{
 			_webDriver = new WebDriverFactory().Create(Settings.Web.TargetBrowser);
 			_objectContainer.RegisterInstanceAs<IWebDriver>(_webDriver);
