@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+	    <PackageReference Include="SpecFlow" Version="3.1.97" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.1.97" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="web.appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Features\UsedCarsCatelogue.feature">
+	    <LastGenOutput>UsedCarsCatelogue.feature.cs</LastGenOutput>
+    </None>
+    <None Update="specflow.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+	<ItemGroup>
+		<SpecFlowFeatureFiles Update="Features\UsedCarsCatelogue.feature">
+			<Generator>SpecFlowSingleFileGenerator</Generator>
+			<LastGenOutput>UsedCarsCatelogue.feature.cs</LastGenOutput>
+			<Generator Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'"></Generator>
+		</SpecFlowFeatureFiles>
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Trademe.Automation.Core\Trademe.Automation.Core.csproj" />
+    <ProjectReference Include="..\Trademe.Automation.Web.Driver\Trademe.Automation.Web.Driver.csproj" />
+  </ItemGroup>
+
+</Project>

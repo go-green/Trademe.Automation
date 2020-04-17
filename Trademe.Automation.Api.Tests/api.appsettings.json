@@ -1,0 +1,6 @@
+﻿{
+	"Api": {
+		"BaseUrl": "https://api.trademe.co.nz/",
+		"Version": "1"
+	}
+}

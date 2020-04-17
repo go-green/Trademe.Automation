@@ -1,0 +1,7 @@
+﻿{
+	"Web": {
+		"BaseUrl": "https://www.tmsandbox.co.nz/",
+		"Target": "Chrome",
+		"TimeOut": "30"
+	}
+}
