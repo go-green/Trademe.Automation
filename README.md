@@ -1,4 +1,4 @@
-# FLUX Automation Exercise
+## FLUX Automation Exercise
 
 ## Instructions
 
@@ -25,7 +25,7 @@ The solution has two test projects(Api and Web UI)
 
 1. Use Specflow/Webdriver and BDD approach
 
-## Improvements that I could have made (if I had enough time )
+## Improvements that I could have made
  
 1. Web UI tests don't have a Logger implemented(I have done it only for the Api tests).
 2. Can implement a HTML report generating capability after a test run to see the pass/fail status and stats
@@ -34,3 +34,26 @@ The solution has two test projects(Api and Web UI)
 5. WebDriverFactory can be improved to run the tests using any other browser or even on mobiles using appium and RemoteWebDriver
 6. Can add more hooks (Before after features / Before after steps) to gather vital information such as time taken to execute each steps to identify bottlenecks
 7. Page objects and components only contain the elements/methods (MVP) that are required to achieve the workflows in scenarios.
+
+## Executing tests from command line
+
+### Api tests
+
+1. Navigate to Api test folder where you can find the *.csproj file e.g. C:\Users\xxxx\source\repos\Trademe.Automation\Trademe.Automation.Api.Tests
+2. Open command line and run "dotnet test -v m --logger trx Trademe.Automation.Api.Tests.csproj"
+3. After test run is finished , open TestResults to see the test resul trx file
+
+### Run Selenium tests
+1. Navigate to Api test folder where you can find the *.csproj file e.g. 
+C:\Users\xxxx\source\repos\Trademe.Automation\Trademe.Automation.Web.Tests
+2. Open command line and run "dotnet test -v m --logger trx Trademe.Automation.Web.Tests.csproj"
+3. After test run is finished , open TestResults to see the test resul trx file
+
+## Executing tests from visual studio 
+
+1. Select Tests > Windows > Test Explorer from the Visual studio menu
+2. After successful compilation, you should see tests in the Test Explorer panel.
+3. Right-click and run all or selected tests
+
+
+![Test Example](example.png)
