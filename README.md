@@ -16,10 +16,11 @@
 
 1. Automation framework and code have been implemented using .NET Core 2.1 and C# 7.0 as the language 
 2. .NET Core 2.1 can be download from https://dotnet.microsoft.com/download/dotnet-core/2.1
-3. I have used Visual Studio(VS) 2019 as the IDE during development. If we wish to run tests from visual studio, you need to have Visual studio with specflow visual studio plugin (https://marketplace.visualstudio.com/items?itemName=TechTalkSpecFlowTeam.SpecFlowForVisualStudio). Tests can be run from command line without using VS as well. Please check the 'Executing tests from command line' section below for more information.
-4. chromedriver.exe version 81.0.4044.69 is required to run the tests, If your chrome browser version is lower than 81.0.4044.69, you have to upgrade.
-5. If you have a newer version of Chrome Browser than version 81.0.4044.69, please use the matching chromedriver.exe
-6. Make sure chromedriver.exe is not being used by any other process during test execution. Use "taskkill -f -im chromedriver.exe" to kill if it's being used.
+3. I have used Visual Studio(VS) 2019 (https://visualstudio.microsoft.com/downloads/) as the IDE during development. 
+4. If you wish to run tests from visual studio, you need to have Visual studio with specflow visual studio plugin (https://marketplace.visualstudio.com/items?itemName=TechTalkSpecFlowTeam.SpecFlowForVisualStudio). Tests can be run from command line without using VS as well. Please check the 'Executing tests from command line' section below for more information.
+5. chromedriver.exe version 81.0.4044.69 is required to run the tests, If your chrome browser version is lower than 81.0.4044.69, you have to upgrade.
+6. If you have a newer version of Chrome Browser than version 81.0.4044.69, please use the matching chromedriver.exe
+7. Make sure chromedriver.exe is not being used by any other process during test execution. Use "taskkill -f -im chromedriver.exe" to kill if it's being used.
 
 
 ## Tests
