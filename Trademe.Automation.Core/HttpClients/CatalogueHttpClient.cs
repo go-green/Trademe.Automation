@@ -4,7 +4,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Trademe.Automation.Core.Contracts.Api;
-using Trademe.Automation.Core.Dtos;
+using Trademe.Automation.Core.DataModels;
 
 namespace Trademe.Automation.Core.HttpClients
 {

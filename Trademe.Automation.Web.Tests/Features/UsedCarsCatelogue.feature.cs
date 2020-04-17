@@ -155,7 +155,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I have opened the advanced search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.And("I have selected \'Kia\' from the vehicle make drop down menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have entered \'Kia\' into the keyword field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
  testRunner.And("I have left all other filter parameters unchanged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

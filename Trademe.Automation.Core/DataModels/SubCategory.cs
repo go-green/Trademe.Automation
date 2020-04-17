@@ -1,4 +1,4 @@
-﻿namespace Trademe.Automation.Core.Dtos
+﻿namespace Trademe.Automation.Core.DataModels
 {
 	public class Subcategory
 	{
