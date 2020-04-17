@@ -40,7 +40,7 @@ namespace Tests
 
 			// Assert
 			usedCars.Subcategories.FirstOrDefault(cat => cat.Name.Equals("Kia")).Should().NotBe(null);
-			usedCars.Subcategories.First(cat => cat.Name.Equals("Kia")).Count.Should().Be(1195);
+			usedCars.Subcategories.First(cat => cat.Name.Equals("Kia")).Count.Should().Be(1196);
 		}
 
 		[Test]

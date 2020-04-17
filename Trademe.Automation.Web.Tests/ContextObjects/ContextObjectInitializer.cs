@@ -4,7 +4,7 @@ namespace Trademe.Automation.Web.Tests.ContextObjects
 {
 	public class ContextObjectInitializer
 	{
-		private readonly Dictionary<string, object> _context;
+		private readonly IDictionary<string, object> _context;
 
 		public ContextObjectInitializer()
 		{
