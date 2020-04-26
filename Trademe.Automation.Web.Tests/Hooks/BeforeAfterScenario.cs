@@ -1,5 +1,4 @@
 ﻿using BoDi;
-using Microsoft.Extensions.DependencyModel;
 using OpenQA.Selenium;
 using Serilog;
 using TechTalk.SpecFlow;
