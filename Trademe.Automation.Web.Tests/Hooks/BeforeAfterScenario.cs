@@ -38,7 +38,7 @@ namespace Trademe.Automation.Web.Tests.Hooks
 
 		private void RegisterWebDriver()
 		{
-			_webDriver = new WebDriverFactory().Create(Settings.Web.TargetBrowser);
+			_webDriver = new WebDriverFactory().Create(Settings.Web.TargetBrowser, Settings.Web.SeleniumGrid);
 			_objectContainer.RegisterInstanceAs<IWebDriver>(_webDriver);
 		}
 

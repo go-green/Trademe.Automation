@@ -11,6 +11,7 @@
     1. Run Api tests
     1. Run Selenium tests
 1. Executing tests from visual studio 
+1. Executing tests from Docker
 
 ## Instructions
 
@@ -68,3 +69,11 @@ C:\Users\xxxx\source\repos\Trademe.Automation\Trademe.Automation.Web.Tests
 3. Right-click and run all or selected tests
 
 ![Test Example](example.png)
+
+## Executing tests from Docker
+
+0. Change the target to "Remote" in appsettings.json of Trademe.Automation.Web.Tests project
+1. You must have docker installed. Make sure you are docker (deamon) server running on Linix (If on Windows containers, switch to Linux containers)
+2. On the solution root folder, build the test container using "docker build --target webtestrunner -t webuitests:latest"
+3. Start the selenium hub as "docker run -d --name seleniumhub -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome"
+4. Run your web ui tests as "docker run --link seleniumhub webuitests"
